@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style type="text/css">
+
+    </style>
+  </head>
+  <body>
+    <!--
+      https://www.youtube.com/watch?v=qmv1Q_bjyhM&t=184s
+    --->
+    <div>Tooptips are enabled on click</div>
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip">
+      Tooltip on top
+    </button>
+
+    <div id="mydiv" title="Tooltip Info">I'm div, Tooltip hide or show on me</div>
+
+    <button id="myshow" type="button" class="btn btn-secondary">
+     Click me to show tooltip on div
+    </button>
+    <button id="myhide" type="button" class="btn btn-secondary">
+      Click me to hide tooltip on div
+    </button>
+    <button id="mytoggle" type="button" class="btn btn-secondary">
+      Click me to toggle tooltip on div
+    </button>
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      //enable tooltip everywhere
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip({'data-placement':"top", title:"Tooltip on top", trigger:"click", animation:true})
+      });
+
+      $(document).ready(function(){
+       
+        $('#mydiv').tooltip({
+          trigger:"manual" 
+        });
+      });
+
+      $('#myshow').click(function(){
+        $('#mydiv').tooltip('show');
+      });
+       $('#myhide').click(function(){
+        $('#mydiv').tooltip('hide');
+      });
+        $('#mytoggle').click(function(){
+        $('#mydiv').tooltip('toggle');
+      });
+    </script>
+  </body>
+</html>

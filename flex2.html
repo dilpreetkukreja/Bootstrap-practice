@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <style>
+      .container{
+        border:1px solid red;
+
+      }
+       /* dont use percentage for height & use your own classes to set height on container*/
+      .mycontainer{
+        height:100vh;
+      }
+     
+      .row{
+        border:1px solid black;
+
+      }
+       /* dont use percentage for height & use your own classes to set height on row*/
+      /*.myrow{
+        height:25vh;
+      }*/
+      [class^=col]{
+        border:1px dotted black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- https://stackoverflow.com/questions/47286708/cant-get-height-attribute-in-bootstrap-4-alpha-to-work-->
+     <div class="container mycontainer">
+      
+      <hr>
+      <!--align content center, works only on muiltiple lines of rows in a row, use flex-wrap(default on row) to wrap elements to next row in a row---->
+      <div class="row h-25 align-content-center">
+        <div class="col-6">
+          row 5 col 1 span 2
+        </div>
+        <div class="col-6">
+          row 5 col 2  span 3
+        </div>
+        <!-- sizing acc to content--->
+        <div class="col-6">
+          row 5 col 3  span 4
+        </div>
+        <div class="col-2">
+          row 5 col 2  span 4
+        </div>
+      </div>
+      <hr>
+      
+      <div class="row h-25 align-content-center">
+        <div class="col-6">
+          row 5 col 1 span 2
+        </div>
+        <div class="col-6">
+          row 5 col 2  span 3
+        </div>
+      </div>
+       <hr>
+      <!-- changing justify content center-->
+      <div class="row  justify-content-center">
+        <div class="col-2">
+          row 5 col 1 span 2
+        </div>
+        <div class="col-3">
+          row 5 col 2  span 3
+        </div>
+        <!-- sizing acc to content--->
+        <div class="col-4">
+          row 5 col 3  span 4
+        </div>
+      </div>
+       <hr>
+      <div class="row myrow h-25 align-items-center">
+        <div class="col-2">
+          row 6 col 1 span 2
+        </div>
+        <div class="col-3 align-self-start">
+          row 6 col 2  span 3
+        </div>
+        <!-- sizing acc to content--->
+        <div class="col-4">
+          row 6 col 3  span 4
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-2 ml-auto">
+          row 7 col 1 span 2
+        </div>
+        <div class="col-3">
+          row 7 col 2  span 3
+        </div>
+        <!-- sizing acc to content--->
+        <div class="col-4">
+          row 7 col 3  span 4
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-2">
+          row 7 col 1 span 2
+        </div>
+        <div class="col-3 mr-auto">
+          row 7 col 2  span 3
+        </div>
+        <!-- sizing acc to content--->
+        <div class="col-4">
+          row 7 col 3  span 4
+        </div>
+      </div>
+      <hr>
+      <div class="row flex-column h-25">
+        <div class="col-2 mb-auto">
+          row 7 col 1 span 2
+        </div>
+        <div class="col-3">
+          row 7 col 2  span 3
+        </div>
+        <!-- sizing acc to content--->
+        <div class="col-4">
+          row 7 col 3  span 4
+        </div>
+      </div>
+    </div><!-- container -->
+    
+
+   
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<style type="text/css">
+  		html,body{
+  			height:100%;
+  		}
+  		.container{
+  			height:100%;
+  			border:1px solid red;
+  		}
+  		.inside{
+  			border:1px solid brown;
+  		}
+  		h1{
+  			border:1px solid pink;
+  		}
+  		.hidden {
+		  opacity: 0;
+		}
+  		.fading-up{
+  			position:relative;
+  			animation:fadeup 1s linear 0s;
+  			 animation-fill-mode: forwards; 
+  		}
+  		@-webkit-keyframes fadeup{
+  			0%{bottom:-20px;opacity:0;}
+  			50%{bottom:-10px;opacity:0.8;}
+  			100%{bottom:0px;opacity:1;
+  			}
+  		}
+
+  	</style>
+  </head>
+  <body>
+  	<div class="container">
+  		<div class="inside">
+  				<p> Scroll down slowly to see moving up with fade effect</p>
+  		</div>
+  	</div>
+  	<div style="margin-bottom: 30px;">
+  		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque sem neque, sit amet cursus leo convallis a. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur eu enim nibh. Quisque accumsan sem vitae sagittis iaculis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget augue sed est posuere vulputate. Duis sit amet luctus massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse pharetra, eros in pretium scelerisque, augue neque sollicitudin nunc, id dictum sem dolor sed nunc. Praesent augue nisl, hendrerit id risus sed, sagittis sodales mauris. Cras pharetra odio malesuada condimentum rutrum. Etiam laoreet felis sed massa molestie bibendum. Integer facilisis maximus magna et placerat. Curabitur ut aliquet libero.
+  	</div>
+  	<div class="hidden" style="margin-bottom: 30px;">
+
+  		This is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque sem neque, sit amet cursus leo convallis a. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur eu enim nibh. Quisque accumsan sem vitae sagittis iaculis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget augue sed est posuere vulputate. Duis sit amet luctus massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse pharetra, eros in pretium scelerisque, augue neque sollicitudin nunc, id dictum sem dolor sed nunc. Praesent augue nisl, hendrerit id risus sed, sagittis sodales mauris. Cras pharetra odio malesuada condimentum rutrum. Etiam laoreet felis sed massa molestie bibendum. Integer facilisis maximus magna et placerat. Curabitur ut aliquet libero.
+  	</div>
+  	<div class="hidden">
+
+  		This is Second hidden block<br>
+  		This is Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque sem neque, sit amet cursus leo convallis a. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur eu enim nibh. Quisque accumsan sem vitae sagittis iaculis. Lorem ipsum dolor sit amet,
+  	</div>
+
+  	<script type="text/javascript">
+		  var animateHTML = function() {
+		  var elems, windowHeight
+		  
+		  var init = function() {
+		    elems = document.getElementsByClassName("hidden");
+		    windowHeight = window.innerHeight;
+		    _addEventHandlers();
+		    _checkPosition();
+		  }
+		  
+		  var _addEventHandlers = function() {
+		      window.addEventListener("scroll", _checkPosition);
+		      window.addEventListener("resize", init)
+		  }
+		  var _checkPosition = function() {
+		    for ( var i = 0; i < elems.length; i++ ) {
+		      var posFromTop = elems[i].getBoundingClientRect().top;
+		      if ( posFromTop - windowHeight <= 0) { 
+		        elems[i].className = elems[i].className.replace( "hidden", "fading-up" );
+		      }
+		    }    
+		  }
+		  
+		  return {
+		    init: init
+		  }
+		}
+
+		animateHTML().init();
+  		
+  	</script>
+  </body>
+ </html>

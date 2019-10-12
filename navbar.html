@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Navbar</title>
+    <style type="text/css">
+      /*li{
+        border:1px solid red;
+      }*/
+    </style>
+  </head>
+  <!--Steps--->
+  <!--
+   1) Give class navbar
+   2) Give class navrbar-brand. navbar-brand class increases the font size 
+   3) Give navbar-light. navbar-light means backround light and text dark
+    So the link will go from blue to black. (navbar-dark means background dark and text light)
+   4) Give class bg-light. Creates a light background color in navigation bar.(bg-dark creates dark background)
+   5)  Create links. This will create bulleted links on the right side. Give class navbar-nav. This will unstyled the links (no bullets). Give class navbar-item and nav-link. This will change the color of links from blue to gray and give padding(top,right and bottom.
+   6) add div with class collapse and navbar-collapse. This will hide the navbar navigation links on all screen sizes.
+   7) Now we need to create toggle button to toggle the navbar navigation links. Create button and give classes and attributes as 
+   class="navbar-toggler" data-toggle="collaspe" data-target="#navbarCollapse"
+   8) Give div of navugation linsks an id="navbarCollapse" so that this toggle on button click
+   9) To create hamburger button add class="navbar-toggler-icon"
+   10) Give class active to hightlight active link.
+   11) Add class navbar-expand-lg. This will create vertical navigation links below lg and horizontal navigation-links above lg. and add ml-auto on ul
+    
+  -->
+
+  
+  <body>
+   
+   <nav class="navbar navbar-light bg-light navbar-expand-lg">
+   
+    <a class="navbar-brand" href="#">Website Brand</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="navbar-item active"><a class="nav-link" href="#">Home</a></li>
+        <li class="navbar-item"><a class="nav-link" href="#">About</a></li>
+        <li class="navbar-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+   </div>
+   </nav>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

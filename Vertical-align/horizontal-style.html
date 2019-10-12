@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+	<style type="text/css">
+		/* default <hr> tag values:
+			display: block; 
+			margin-top: 0.5em; 
+			margin-bottom: 0.5em; 
+			margin-left: auto; 
+			margin-right: auto; 
+			border-style: inset; 
+			border-width: 1px;*/
+					
+		hr.style-one {
+				border: 0;
+				height: 1px;
+				background: #333;
+				background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+				background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+				background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+				background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
+		}
+		hr.style-two {
+				border: 0;
+				height: 0;
+				border: 1px solid rgba(0, 0, 0, 0.1);
+
+				/*border-top: 1px solid rgba(0, 0, 0, 0.1);
+				border-bottom: 1px solid rgba(255, 255, 255, 0.3);*/
+				}
+		hr.style-new {
+		border: 0;
+		height: 0;
+		border-top: 1px solid rgba(0, 0, 0, 0.1);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		}
+		/* flaired edges */
+		/* use div for this */		
+		.first{
+			height: 30px;
+		border-style: solid;
+		border-color: red;
+		border-width: 0 0 1px 0;
+		border-radius: 20px;
+		margin-bottom: 60px;
+
+		}
+		.first:before {
+		display: block;
+		position:relative;
+		top:30px;
+		content: "";
+		height: 30px;
+		
+		border-style: solid;
+		border-color: black;
+		border-width: 1px 0 0 0;
+		border-radius: 20px;
+		}
+
+		/* Text between <hr> tag */
+
+		.style-four {
+		padding: 0;
+		border: none;
+		border-top: medium double #333;
+		color: #333;
+		text-align: center;
+		}
+		.style-four:after {
+		content: "www.formget.com";
+		display: inline-block;
+		position: relative;
+		top: -0.7em;
+		font-size: 1.5em;
+		padding: 0 0.25em;
+		background: white;
+		}
+
+		hr.style-five {
+			background:url(star.png) no-repeat center;
+			text-align:center;
+
+			height:42px;
+			border:none !important;
+		}
+		.font-icon-middle{
+			text-align:center;
+		}
+		.outer-line{
+			width: 40%;
+  border-bottom: 1px solid red;
+		}
+
+span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+
+	</style>
+</head>
+<body>
+	 <hr class="style-one">
+	 <hr class="style-two">
+	  <hr class="style-new">
+	  <div class="first"></div>
+	  <div class="style-four"></div>
+	  <hr class="style-five">
+	  <div class="font-icon-middle">
+		  <span class="outer-line"></span>
+		  <span class="fa fa-star" style="padding-left:10px;padding-right: 10px;" aria-hidden="true"></span>
+		  <span class="outer-line"></span>
+		</div>
+
+
+</body>
+</html>

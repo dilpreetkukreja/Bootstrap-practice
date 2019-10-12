@@ -1,0 +1,21 @@
+*{
+	box-sizing:border-box;
+}
+.hero{
+	background-image: url(../images/hero-img.jpg);
+	height:500px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-bottom: 30px;
+	background-attachment: fixed;
+}
+.second{
+	background-image: url(../images/second.jpg);
+	height:500px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-bottom: 30px;
+	background-attachment: fixed;
+}

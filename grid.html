@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+      .container{
+        border:1px solid red;
+      }
+      .row{
+        border:1px solid black;
+      }
+      [class^=col]{
+        border:1px dotted black;
+      }
+    </style>
+
+
+  </head>
+  <body>
+    <!-- container and column has padding left and right of 15px and rows have margin left and right of -15px;-->
+    <!--Rows are wrappers for columns. Each column has horizontal padding (called a gutter) for controlling the space between them. This padding is then counteracted on the rows with negative margins. This way, all the content in your columns is visually aligned down the left side.-->
+    <!-- now hell and rows are aligned both left-->
+
+
+   <!--container centered aligned the content because it has auto margin on left and right-->
+    <div class="container">
+
+      <h1>Row1 specify columns for particular device and up, here 768(md)</h1>
+      <!--In a grid layout, content must be placed within columns and only columns may be immediate children of rows.-->
+      <div class="row">
+        <!-- if we give class col only then devices above 768 follow this pattarn and devices below are stacked on top of each other-->
+        <div class="col-md-2">
+          row 1 col 1 
+        </div>
+        <div class="col-md-2">
+          row 1 col 2 i have content
+        </div>
+        <!-- sizing acc to content--->
+        <div class="col-md-auto">
+          row 1 col 3 i have content
+        </div>
+
+      </div>
+      <h1>Row2 - col</h1>
+      <div class="row">
+         <!-- if we give class col only then all devices follow this pattren and at very very very low dimensions even below than iphone 5 it is stacked-->
+        <div class="col">
+          row 2 col 1
+        </div>
+        <div class="col">
+          row 2 col 2
+        </div>
+      </div>
+       <h1>Row3 - col-auto will have width acc to its size</h1>
+       <div class="row">
+        <!-- if we give class col only then devices above 768 follow this pattarn and devices below are stacked on top of each other-->
+        <div class="col">
+          row 1 col 1 
+        </div>
+        <div class="col">
+          row 1 col 2 i have content
+        </div>
+        <!-- sizing acc to content--->
+        <div class="col-auto">
+          row 1 col 3 i have content and auto
+        </div>
+
+      </div>
+       <h1>Row4 - breaking the row by .w-100</h1>
+      <!-- equal width multi row-->
+      <div class="row">
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="w-100"></div>
+        <div class="col">col</div>
+        <div class="col">col</div>
+      </div>
+      <h1>Row5 - specify more than 12 columns</h1>
+       <div class="row">
+        <!-- if we give class col only then devices above 768 follow this pattarn and devices below are stacked on top of each other-->
+        <div class="col-6">
+          row 1 col 1 
+        </div>
+        <div class="col-6">
+          row 1 col 2 i have content
+        </div>
+        <div class="col-4">
+          row 1 col 3 i next row just below me
+        </div>
+
+      </div>
+
+       <div class="row">
+        <!-- if we give class col only then devices above 768 follow this pattarn and devices below are stacked on top of each other-->
+        <div class="col">
+          row 1 col 1 
+        </div>
+        <div class="col">
+          row 1 col 2 i have content
+        </div>
+
+      </div>
+      <h1>Row - no gutters</h1>
+       <div class="row no-gutters">
+        <!-- if we give class col only then devices above 768 follow this pattarn and devices below are stacked on top of each other-->
+        <div class="col">
+          row 1 col 1 
+        </div>
+        <div class="col">
+          row 1 col 2 i have content
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
